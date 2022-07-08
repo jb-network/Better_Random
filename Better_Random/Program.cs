@@ -26,11 +26,12 @@ public static class RandomExtensions
     {
         return ExtRandom.NextDouble() * MaxValue;
     }
-
+    
     public static string NextString (this Random ExtRandom, params string[] RndWord)
     {
         return RndWord[ExtRandom.Next(RndWord.Length)];
     }
+    
     public static bool CoinFlip(this Random ExtRandom, double LuckForHeads = 0.5)
     {
         double CoinResults = ExtRandom.NextDouble() - LuckForHeads;
